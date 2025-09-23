@@ -1,0 +1,12 @@
+<ng-template #demoNg let-rowData="rowData" let-captureEvents="captureEvents">
+  <app-botones [data]="rowData" (emitter)="captureEvents($event)"></app-botones>
+</ng-template>
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover"></table>
+
+<div *ngIf="selectedRow" class="mt-3 p-3 border rounded">
+  <h4>Fila Seleccionada:</h4>
+  <p><strong>ID:</strong> {{selectedRow.id}}</p>
+  <p><strong>Nombre:</strong> {{selectedRow.firstName}}</p>
+  <p><strong>Apellido:</strong> {{selectedRow.lastName}}</p>
+</div>
