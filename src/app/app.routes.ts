@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
-import { TablaEstandarComponent } from './tabla-estandar/tabla-estandar.component';
+import { EjemploComponent } from './ejemplo/ejemplo.component';
 
 export const routes: Routes = [
-    {
-        path: "tabla-estandar",
-        component: TablaEstandarComponent
-    }
+  { path: '', component: EjemploComponent },
+  { path: 'ejemplo', component: EjemploComponent }
 ];

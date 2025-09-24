@@ -3,22 +3,24 @@ export interface ITableColumn {
   data: string;
   sortable?: boolean;
   visible?: boolean;
-  render?: (data: any, type: any, row: any) => string;
 }
 
 export interface ITableConfig {
-  columns: ITableColumn[];
+  columns: any[];
   dataUrl?: string;
+  data?: any[];
   pageLength?: number;
   searching?: boolean;
   ordering?: boolean;
-  serverSide?: boolean;
   responsive?: boolean;
+  selectable?: boolean;
+  multiSelect?: boolean;
 }
 
 export interface ITableAction {
-  label?: string;
-  icon?: string;
-  action: (rowData: any) => void;
-  showCondition?: (rowData: any) => boolean;
+  label: string;      // Texto del botón
+  icon?: string;      // Icono opcional
+  action: string;     // Identificador de la acción
+  class?: string;     // Clases CSS para estilo
+  showCondition?: (row: any) => boolean;  // Función que determina si se muestra el botón
 }
