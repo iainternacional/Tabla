@@ -6,6 +6,7 @@ import { ITableConfig, ITableAction } from '../Interfaces/ITableConfig';
 import { DataTablesModule } from "angular-datatables";
 import { CommonModule } from '@angular/common';
 import { EnumAcciones } from '../enums/action-buttons.enum';
+
 @Component({
   selector: 'app-tabla-estandar',
   imports: [DataTablesModule, CommonModule],

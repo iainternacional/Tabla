@@ -6,7 +6,7 @@ import { TablaEstandarComponent } from '../tabla-estandar/tabla-estandar.compone
   template: `
     <app-tabla-estandar
       [tableConfig]="config"
-      [actionKey]="'CRUD'"
+      [actionKey]="'VIEW_ONLY'"
       (rowSelect)="onRowSelect($event)"
       (rowAction)="onRowAction($event)"
       (tableReady)="onTableReady()">
